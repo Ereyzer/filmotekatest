@@ -18,9 +18,9 @@ function openModalFilm(evt) {
     return;
   }
 
-  ApiService.movieId = evt.target.parentNode.dataset.action;
-
-  ApiService.fetchInformationAboutFilm().then(response => {
+  const movieId = evt.target.parentNode.dataset.action;
+  console.log(movieId)
+  ApiService.fetchInformationAboutFilm(movieId).then(response => {
     console.log(response)
     refs.modalFilmInfo.innerHTML = modalFilmTpl(response);
     //* ref на оверлей для запуске трейлера

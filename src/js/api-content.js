@@ -39,7 +39,7 @@ export default class FilmsApiService {
   }
 
   //Описание фильма - возвращает обект
-  fetchInformationAboutFilm(id) {
+  fetchInformationAboutFilm(id = '520783') {
     this.filmId = id;
     return fetch(
       `${BASE_URL}movie/${this.filmId}?api_key=${API_KEY}&language=en-US&include_adult=false&append_to_response=videos,images`,
