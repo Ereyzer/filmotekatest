@@ -5,6 +5,7 @@ import { ApiService } from '../index';
 import { showSpinner } from './spinner';
 // import pagination1 from './maryska';
 var pagination = require('./maryska');
+console.log('МАРИСЬКИ ПРАЦЮЄ');
 
 let films = [];
 let GENRES = [];
